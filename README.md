@@ -13,7 +13,50 @@
 ![image](https://github.com/user-attachments/assets/0e45a521-7f79-4fb5-abbf-2e7feefcaf16)
 
 ### Objective : 
+The primary objective of this project is to develop a machine learning model that can predict the selling price of a car based on various features such as the car's age, fuel type, transmission type, and more. By accurately predicting car prices, this model can help sellers and buyers make informed decisions in the automotive market.
 
 ### Key Activities :
+1.Data Collection and Processing:
+> Loading and examining the dataset to understand its structure.
+> Checking for missing values and handling them appropriately.
+> Encoding categorical variables to numerical values for model compatibility.
+
+2. Splitting the Data:
+> Separating the dataset into features (X) and target variable (Y).
+> Dividing the data into training and testing sets to evaluate the model's performance.
+
+3. Model Training:
+> Training a Linear Regression model on the training data.
+> Training a Lasso Regression model on the training data.
+
+4.Model Evaluation:
+> Predicting car prices on both training and testing data.
+> Calculating the R-squared error to measure the model's accuracy.
+> Visualizing the comparison between actual and predicted prices.
 
 ### Technologies used : 
+1. Python Libraries:
+> Pandas: For data manipulation and analysis.
+> Matplotlib and Seaborn: For data visualization.
+> Scikit-learn: For machine learning model implementation and evaluation.
+
+2.Models:
+> Linear Regression: A linear approach to modeling the relationship between the dependent variable and one or more independent variables.
+> Lasso Regression: A linear model that includes L1 regularization to enhance prediction accuracy and interpretability
+
+### Conclusion : 
+This Car Price Prediction project leveraged machine learning to estimate car selling prices based on features such as age, fuel type, and transmission. The primary steps included data preprocessing, model training with Linear and Lasso Regression, and model evaluation using R-squared error metrics.
+Data Preprocessing:
+Encoding categorical variables is essential for model compatibility.
+Understanding and preparing the dataset properly ensures accurate model training.
+Model Performance:
+Linear Regression performed slightly better than Lasso Regression.
+Both models provided a reasonable approximation of car prices, evidenced by their R-squared scores and scatter plot visualizations.
+Visualization:
+Scatter plots comparing actual versus predicted prices are useful for assessing model accuracy.
+Helpful Insights for Future Work:
+Feature Engineering: Introducing or transforming features could capture more complex relationships in the data.
+Advanced Models: Exploring models like Random Forest or Gradient Boosting could improve accuracy.
+Hyperparameter Tuning: Fine-tuning model parameters can enhance performance.
+Cross-Validation: Ensuring consistency across different data subsets is crucial for robust model evaluation.
+This project highlights the potential of machine learning in predicting car prices, offering valuable insights for better decision-making in the automotive market.
