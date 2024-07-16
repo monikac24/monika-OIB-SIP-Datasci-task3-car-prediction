@@ -17,9 +17,9 @@ The primary objective of this project is to develop a machine learning model tha
 
 ### Key Activities :
 1.Data Collection and Processing:
-a. Loading and examining the dataset to understand its structure.
-b.Checking for missing values and handling them appropriately.
-c. Encoding categorical variables to numerical values for model compatibility.
+a) Loading and examining the dataset to understand its structure.
+b) Checking for missing values and handling them appropriately.
+c) Encoding categorical variables to numerical values for model compatibility.
 
 2. Splitting the Data:
 a. Separating the dataset into features (X) and target variable (Y).
