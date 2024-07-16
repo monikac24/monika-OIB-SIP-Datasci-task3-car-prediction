@@ -17,32 +17,32 @@ The primary objective of this project is to develop a machine learning model tha
 
 ### Key Activities :
 1.Data Collection and Processing:
-> Loading and examining the dataset to understand its structure.
-> Checking for missing values and handling them appropriately.
-> Encoding categorical variables to numerical values for model compatibility.
+a. Loading and examining the dataset to understand its structure.
+b.Checking for missing values and handling them appropriately.
+c. Encoding categorical variables to numerical values for model compatibility.
 
 2. Splitting the Data:
-> Separating the dataset into features (X) and target variable (Y).
-> Dividing the data into training and testing sets to evaluate the model's performance.
+a. Separating the dataset into features (X) and target variable (Y).
+b. Dividing the data into training and testing sets to evaluate the model's performance.
 
 3. Model Training:
-> Training a Linear Regression model on the training data.
-> Training a Lasso Regression model on the training data.
+a. Training a Linear Regression model on the training data.
+b. Training a Lasso Regression model on the training data.
 
 4.Model Evaluation:
-> Predicting car prices on both training and testing data.
-> Calculating the R-squared error to measure the model's accuracy.
-> Visualizing the comparison between actual and predicted prices.
+a. Predicting car prices on both training and testing data.
+b. Calculating the R-squared error to measure the model's accuracy.
+c. Visualizing the comparison between actual and predicted prices.
 
 ### Technologies used : 
 1. Python Libraries:
-> Pandas: For data manipulation and analysis.
-> Matplotlib and Seaborn: For data visualization.
-> Scikit-learn: For machine learning model implementation and evaluation.
+a. Pandas: For data manipulation and analysis.
+b.  Matplotlib and Seaborn: For data visualization.
+c.  Scikit-learn: For machine learning model implementation and evaluation.
 
 2. Models:
-> Linear Regression: A linear approach to modeling the relationship between the dependent variable and one or more independent variables.
-> Lasso Regression: A linear model that includes L1 regularization to enhance prediction accuracy and interpretability
+a. Linear Regression: A linear approach to modeling the relationship between the dependent variable and one or more independent variables.
+b. Lasso Regression: A linear model that includes L1 regularization to enhance prediction accuracy and interpretability
 
 ### Conclusion : 
 This Car Price Prediction project leveraged machine learning to estimate car selling prices based on features such as age, fuel type, and transmission. The primary steps included data preprocessing, model training with Linear and Lasso Regression, and model evaluation using R-squared error metrics.
