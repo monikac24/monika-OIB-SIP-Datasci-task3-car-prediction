@@ -1,0 +1,165 @@
+Task: ***Car Prediction Using Machine Learning***
+
+
+
+# Name : Monika Choudhary 
+#Batch : *JUNE*-P2 OIB-SIP 
+#*Data Science* as a *intern* 
+
+
+
+Importing the Dependencies
+
+
+
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Lasso
+from sklearn import metrics
+
+
+
+
+Data Collection and Processing
+
+#loading the data
+car_dataset = pd.read_csv("/content/car data.csv")
+
+# checking first 5 rows of data
+car_dataset.head()
+
+#checking no. of rows and columns
+car_dataset.shape
+
+car_dataset.info()
+
+
+#checking the no. of missing values
+car_dataset.isnull().sum()
+
+#checking the distribution categorical data
+print(car_dataset.Fuel_Type.value_counts())
+print(car_dataset.Selling_type.value_counts())
+print(car_dataset.Transmission.value_counts())
+
+
+
+
+
+Encoding the Categorical Data
+
+#encoding the Fuel_Type column petrol = 0 , diseal = 1 and CNG = 2
+car_dataset.replace({'Fuel_Type':{'Petrol':0 ,'Diesel':1,'CNG':2}},inplace=True)
+
+#encoding the Selling_type Dealer = 0 , Individual = 1
+car_dataset.replace({'Selling_type' : {'Dealer':0 ,'Individual':1}},inplace=True)
+
+#encoding the Transmission column Manual = 0 , Automatic = 1
+car_dataset.replace({'Transmission' : {'Manual':0 ,'Automatic':1}},inplace=True)
+
+car_dataset.head()
+
+Splitting the data and Target
+
+X = car_dataset.drop(['Car_Name','Selling_Price'],axis=1)
+Y =car_dataset['Selling_Price']
+print(X)
+print(Y)
+
+Splitting Data into Training data Testing data
+
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.1,random_state=2)
+
+Model Training
+
+#loading Linear Regression
+linear_reg_model = LinearRegression()
+
+
+linear_reg_model.fit(X_train, Y_train)
+
+
+Model Evaluation
+
+#predication on training data
+training_data_prediction = linear_reg_model.predict(X_train)
+
+# R squared Error
+error_score = metrics.r2_score(Y_train, training_data_prediction)
+print("R squared Error : ", error_score)
+
+
+
+Visualize the actual price and predicted price
+
+plt.scatter(Y_train, training_data_prediction)
+plt.xlabel("Actual Price")
+plt.ylabel("Predicted Price")
+plt.title(" Actual Prices VS Predicted Prices")
+plt.show()
+
+#prediction on test data
+test_data_prediction = linear_reg_model.predict(X_test)
+
+
+# R squared Error
+error_score = metrics.r2_score(Y_test, test_data_prediction)
+print("R squared Error : ", error_score)
+
+plt.scatter(Y_test, test_data_prediction)
+plt.xlabel("Actual Price")
+plt.ylabel("Predicted Price")
+plt.title(" Actual Prices VS Predicted Prices")
+plt.show()
+
+Lasso Regression
+
+
+
+#loading LAsso Regression
+lasso_reg_model = Lasso()
+
+
+lasso_reg_model.fit(X_train, Y_train)
+
+
+Model Evaluation
+
+#predication on training data
+training_data_prediction = lasso_reg_model.predict(X_train)
+
+# R squared Error
+error_score = metrics.r2_score(Y_train, training_data_prediction)
+print("R squared Error : ", error_score)
+
+
+
+Visualize the actual price and predicted price
+
+plt.scatter(Y_train, training_data_prediction)
+plt.xlabel("Actual Price")
+plt.ylabel("Predicted Price")
+plt.title(" Actual Prices VS Predicted Prices")
+plt.show()
+
+#prediction on test data
+test_data_prediction = lasso_reg_model.predict(X_test)
+
+
+# R squared Error
+error_score = metrics.r2_score(Y_test, test_data_prediction)
+print("R squared Error : ", error_score)
+
+plt.scatter(Y_test, test_data_prediction)
+plt.xlabel("Actual Price")
+plt.ylabel("Predicted Price")
+plt.title(" Actual Prices VS Predicted Prices")
+plt.show()
+
+
+
