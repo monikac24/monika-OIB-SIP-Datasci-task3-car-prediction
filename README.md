@@ -40,7 +40,7 @@ The primary objective of this project is to develop a machine learning model tha
 > Matplotlib and Seaborn: For data visualization.
 > Scikit-learn: For machine learning model implementation and evaluation.
 
-2.Models:
+2. Models:
 > Linear Regression: A linear approach to modeling the relationship between the dependent variable and one or more independent variables.
 > Lasso Regression: A linear model that includes L1 regularization to enhance prediction accuracy and interpretability
 
